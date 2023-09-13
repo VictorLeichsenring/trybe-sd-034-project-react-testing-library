@@ -1,4 +1,4 @@
-import { screen, render } from '@testing-library/react';
+import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
