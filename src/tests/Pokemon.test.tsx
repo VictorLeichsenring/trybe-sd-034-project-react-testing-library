@@ -27,7 +27,6 @@ const mockPokemon = {
 const textLink = 'More details';
 
 describe('Teste se é renderizado um card com as informações de determinado Pokémon', () => {
-  const routeText = '/pokemon/25';
   test('O nome correto do Pokémon deve ser mostrado na tela.', () => {
     renderWithRouter(<Pokemon
       pokemon={ mockPokemon }
