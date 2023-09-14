@@ -2,6 +2,7 @@ import { screen } from '@testing-library/react';
 import renderWithRouter from '../renderWithRouter';
 import App from '../App';
 
+// Comentario para rodar no git
 describe('Testar o componente <PokemonDetails.js />', () => {
   const textLink = 'More details';
   test('Testar se as informações detalhadas do Pokémon selecionado são mostradas na tela', async () => {
