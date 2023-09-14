@@ -63,13 +63,10 @@ describe('Teste o componente <Pokedex.tsx />', () => {
       pokemonList={ pokemonList }
       favoritePokemonIdsObj={ mockFavoritePokemonIdsObj }
     />);
-
     const fireTypeButton = screen.getByText('Fire');
     await user.click(fireTypeButton);
-
     const displayedPokemonType = screen.getByTestId('pokemon-type');
     expect(displayedPokemonType.textContent).toBe('Fire');
-
     const nextButton = screen.getByText('Próximo Pokémon');
     await user.click(nextButton);
     const nextDisplayedPokemonType = screen.getByTestId('pokemon-type');
@@ -89,16 +86,10 @@ describe('Teste o componente <Pokedex.tsx />', () => {
       pokemonList={ pokemonList }
       favoritePokemonIdsObj={ mockFavoritePokemonIdsObj }
     />);
-
-    // Suponhamos que você tenha um botão de filtro para "Fire" Pokémon e que clique nele.
     const fireButton = screen.getByText('Fire');
     await user.click(fireButton);
-
-    // Agora você clica no botão "All" para remover os filtros.
     const allButton = screen.getByText('All');
     await user.click(allButton);
-
-    // Você verifica se o primeiro Pokémon exibido após clicar em "All" é o primeiro Pokémon da sua lista.
     const firstPokemon = pokemonList[0].name;
     expect(screen.getByText(firstPokemon)).toBeInTheDocument();
   });
